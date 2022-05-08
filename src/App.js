@@ -1,10 +1,14 @@
-import './App.css';
+
+import { Fragment } from 'react';
+import Input from './components/Input';
 
 function App() {
   return (
-    <div>
-      
-    </div>
+    <Fragment>
+      <div>
+        <Input></Input>
+      </div>
+    </Fragment>
   );
 }
 
