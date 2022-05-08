@@ -2,9 +2,13 @@
 1. Clone the repository using HTTPS (copy the url)
 2. Open Git Bash
 3. Change the current working directory to the location where you want the cloned directory
-4. Type: ### `git clone url_you_copied_earlier`
+4. Type: `git clone url_you_copied_earlier`
 
 # How to run React App
+
+To install a package in the project directory, you can run:
+
+### `npm install`
 
 In the project directory, you can run:
 
