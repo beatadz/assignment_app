@@ -24,15 +24,6 @@ p{
     text-align: center;
 }
 
-.first{
-    margin-left: 50px;
-    margin-right: 150px;
-}
-
-.second{
-    margin-right: 50px;
-    margin-left: 280px;
-}
 
 button:focus {
     outline: none;
@@ -60,8 +51,6 @@ button:active {
 
 .flex-container{
     display: flex;
-    margin: auto;
-
 }
 
 input[type=number]{

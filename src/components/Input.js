@@ -26,15 +26,6 @@ const Input = () => {
     async function fetchWordsHandler(){
         setIsLoadingW(true);
         const amount = enteredAmount;
-        // const response = await fetch('https://random-words-api.vercel.app/word');
-
-        // if(!response.ok){
-        //     throw new Error("ERROR");
-        // }
-
-        // const responseData = await response.json();
-        // setWord(responseData[0]);
-        // console.log(responseData[0].word);
         var allData = [];
         
         for(let i = 0; i < amount; i++){
@@ -46,7 +37,6 @@ const Input = () => {
         allData.sort((a, b) => (a.word > b.word) ? 1 : -1);
         setWords(allData);
         setIsLoadingW(false);
-        //console.log(allData[0].word);
 
     };
 
@@ -71,9 +61,9 @@ const Input = () => {
                     <label className="label-text">How many random words do you want to find?</label>
                     <input onChange={changeHandler} value={enteredAmount} type='number' min="5" max="20" step="1"/>
                 </div>
-                <div>
-                    <button className="first" type="submit" onClick={fetchWordsHandler}>Click to find random words</button>
-                    <button className="second" onClick={fetchRecordingsHandler}>Click to find recordings</button>
+                <div className="flex-container">
+                    <button type="submit" onClick={fetchWordsHandler}>Click to find random words</button>
+                    <button onClick={fetchRecordingsHandler}>Click to find recordings</button>
                 </div>
             </form>
             {(isLoadingW || isLoadingR) && <p>Loading...</p>}
